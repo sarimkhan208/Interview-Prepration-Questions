@@ -4,6 +4,7 @@
 ## 1) What is Block Scope ?
 Whenever we declare any variable with let and const it can access to that scope only not another scope 
 
+let and const provide block level scope which means the varibal declare insde { let a=208} is not able to uccused outside of the scope
 Example
 
 if(true){
@@ -12,3 +13,5 @@ if(true){
 }
 
 console.log(a) --> (Output gives a refrence error Becouse a is not declare in this scope)
+
+## 2)
