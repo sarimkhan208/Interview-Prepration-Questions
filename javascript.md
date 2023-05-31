@@ -18,3 +18,18 @@ console.log(a) --> (Output gives a refrence error Becouse a is not declare in th
 Function Scope is same as the Block scope
 Whenever we declare a variabe inside the function the variable functional scope and it cannot access outide of the function 
 
+## 3) What is Global Scope ?
+Varibale which can access from any scope is known as global scope
+Example 
+
+let a = 208
+
+if(true){
+    console.log(a) -->(Output : 208)
+}
+
+function call(){
+    console.log(a) -->(Output : 208)
+}
+
+console.log(a) -->(Output : 208)
