@@ -37,3 +37,46 @@ console.log(a) -->(Output : 208)
 
 ## 4) What is Lexical Scope ?
 lexical scope provides a predictable and reliable way of managing variable visibility and accessibility based on the hierarchical structure of the source code, enhancing code clarity and maintainability.
+
+## 5) What is mean by This Keyword?
+The keyword "this" in programming languages refers to a special variable or context that represents the current object or instance. It is a way to refer to the object on which a method or function is being called or accessed.
+
+The This key word has different scope for different function such that 
+the ES5 function the this keyword refers to global Object while ES6 arrow function doesnot have internally this keyword it adapt this keyword from there parent
+
+Example 
+
+let obj = {
+    list  : "friend",
+    names : ["ironman","thor","cap"],
+    display1 : function(){
+        console.log(this.names,this.list)
+    },
+    display2 : function(){
+        this.names.map(function(el)=>{
+            console.log(this.list ,  el)
+        })
+    },
+    display3: function(){
+        this.name.map((el)=>{
+            console.log(this.list,el)
+        })
+    }
+}
+
+
+display1() --> (["ironman","thor","cap"],"friends)
+
+display2() --> (
+    undefined  ironman
+    undefined thor
+    undefined cap
+)
+ it gives undefined becouse of function scope this keyword does not have any value inmap function
+
+ display3() --> (
+    friends  ironman
+    friends thor
+    friends cap
+)
+it does not gives any undefined becouse arrow function does not have its own this keyword it inherit from parent function
