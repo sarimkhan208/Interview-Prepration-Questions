@@ -1,7 +1,7 @@
-JavaScript Interview Questions
+# JavaScript Interview Questions
 
 
-1) What is Block Scope ?
+## 1) What is Block Scope ?
 Whenever we declare any variable with let and const it can access to that scope only not another scope 
 
 Example
