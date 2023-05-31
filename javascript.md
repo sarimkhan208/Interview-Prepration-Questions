@@ -14,4 +14,7 @@ if(true){
 
 console.log(a) --> (Output gives a refrence error Becouse a is not declare in this scope)
 
-## 2)
+## 2) What is Functional Scope ?
+Function Scope is same as the Block scope
+Whenever we declare a variabe inside the function the variable functional scope and it cannot access outide of the function 
+
