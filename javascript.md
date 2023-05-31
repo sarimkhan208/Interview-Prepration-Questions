@@ -80,3 +80,18 @@ display2() --> (
     friends cap
 )
 it does not gives any undefined becouse arrow function does not have its own this keyword it inherit from parent function
+
+## 6) What is mean by new Keyword
+
+In programming, the "new" keyword is used to create an instance or object of a class or constructor function. It is commonly used in object-oriented languages such as JavaScript, Java, C++, and C#.
+
+When the "new" keyword is used followed by a constructor function or a class name, it initiates the process of creating a new object based on the definition provided by the constructor or class. This object is often referred to as an instance.
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+var john = new Person("John", 25);
+console.log(john.name); // Output: John
+console.log(john.age); // Output: 25
