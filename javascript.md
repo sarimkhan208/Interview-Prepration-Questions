@@ -33,3 +33,7 @@ function call(){
 }
 
 console.log(a) -->(Output : 208)
+
+
+## 4) What is Lexical Scope ?
+lexical scope provides a predictable and reliable way of managing variable visibility and accessibility based on the hierarchical structure of the source code, enhancing code clarity and maintainability.
