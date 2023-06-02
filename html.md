@@ -1,5 +1,16 @@
 # HTML Interview Questions
 
+
+## 1) How do you add CSS to an HTML webpage?
+## 2) What are the features of HTML5?
+## 3) What are the different types of storage in HTML5? 
+## 4) What do the following mean in html  <section> <article> <footer> <nav> <aside>?
+## 5) What are forms in HTML?
+## 6) What are event listeners in HTML?
+## 7) what is onload event?
+
+
+
 ## 1) How do you add CSS to an HTML webpage?
 To add CSS (Cascading Style Sheets) to an HTML webpage, you have several options. Here are the most common ways:
 
@@ -130,3 +141,80 @@ Here are the key components of HTML forms:
 6-> Form submission: When the user submits the form, the data entered into the form controls is sent to the specified URL or server-side script. The data can be sent via the "GET" method, where the form data is appended to the URL as query parameters, or via the "POST" method, where the data is sent in the body of the HTTP request. The server-side script then processes the submitted data and performs the desired actions.
 
 HTML forms play a crucial role in creating interactive web pages and enabling user interaction and data submission. They provide a means for users to input data, which can be processed and utilized by the server-side scripts or applications.
+
+
+## 6) What are event listeners in HTML?
+
+In HTML, event listeners are mechanisms that allow you to capture and respond to specific events triggered by user interactions or other actions that occur within a web page. By attaching event listeners to HTML elements, you can define custom JavaScript code to be executed when those events occur. Event listeners enable interactivity and dynamic behavior in web pages.
+
+Here's how event listeners work:
+
+1-> Select an HTML element: First, you need to select the HTML element to which you want to attach the event listener. This can be done using various methods, such as accessing the element by its ID, class, or tag name using JavaScript or by manipulating the DOM (Document Object Model) of the web page.
+
+2-> Attach the event listener: Once you have selected the HTML element, you can attach an event listener to it. In JavaScript, you can use the addEventListener() method to specify the event you want to listen for and the function to be executed when the event occurs. The event listener can be attached to the element directly or through JavaScript code.
+
+3-> Define the event handler function: The event handler function is the JavaScript code that will be executed when the specified event is triggered. It defines the actions or behaviors you want to occur in response to the event. The function can access event-related information, such as the event object and the target element, allowing you to perform specific actions based on the event context.
+
+4-> Event execution: When the specified event occurs, such as a click, keypress, mouse movement, form submission, or any other interaction, the event listener triggers the associated event handler function. The function is executed, and you can perform actions like modifying the DOM, manipulating data, updating styles, making AJAX requests, or triggering other functions.
+
+Here's an example that demonstrates attaching an event listener to a button element in HTML:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function handleClick() {
+      alert('Button clicked!');
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      var myButton = document.getElementById('myButton');
+      myButton.addEventListener('click', handleClick);
+    });
+  </script>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+</body>
+</html>
+
+In this example, an event listener is attached to the button with the ID "myButton". When the button is clicked, the handleClick function is executed, displaying an alert with the message "Button clicked!".
+
+Event listeners provide a way to add interactivity and responsiveness to web pages, allowing you to respond to user actions and create dynamic user experiences. They enable you to control the behavior of elements based on events and enhance the overall user interaction with your web application.
+
+
+## 7) what is onload event?
+
+The onload event is a commonly used event in HTML and JavaScript that occurs when a web page or a specific element within the page finishes loading. It is triggered when all the resources of the page, including images, scripts, stylesheets, and other assets, have been completely loaded and rendered by the browser.
+
+The onload event can be applied to various HTML elements, such as the <body> tag, <img> tag, or even individual elements like <div> or <iframe>. When the onload event occurs, any associated JavaScript code or functions are executed.
+
+The onload event is useful for performing actions that require the page or element to be fully loaded before executing certain tasks. Some common use cases of the onload event include:
+
+Initializing JavaScript functionality: You can use the onload event to trigger JavaScript code that initializes components, sets up event listeners, fetches data, or performs any other initialization tasks once the page has finished loading.
+
+Loading external resources dynamically: If you need to load additional resources, such as external scripts, stylesheets, or dynamic content, after the initial page load, you can use the onload event to initiate the loading process.
+
+Manipulating elements and DOM: When an element's onload event fires, it indicates that the element, such as an image, has finished loading. You can then manipulate the element's properties, dimensions, or perform other actions on it dynamically.
+
+Here's an example of using the onload event on an image element:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function imageLoaded() {
+      console.log('Image loaded!');
+      // Perform additional actions on the image element
+    }
+  </script>
+</head>
+<body>
+  <img src="example.jpg" onload="imageLoaded()" alt="Example Image">
+</body>
+</html>
+In this example, when the image with the source "example.jpg" finishes loading, the imageLoaded() function is executed, logging the message "Image loaded!" to the browser's console. You can replace the function with any desired actions to be performed once the image is loaded.
+
+The onload event is a valuable tool for synchronizing JavaScript code with the loading process of web pages and elements, allowing you to control the timing and behavior of your scripts based on the completion of the loading process.
