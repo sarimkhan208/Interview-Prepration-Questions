@@ -1,5 +1,14 @@
 # JavaScript Interview Questions
 
+## 1) What is Block Scope ?
+## 2) What is Functional Scope ?
+## 3) What is Global Scope ?
+## 4) What is Lexical Scope ?
+## 5) What is mean by This Keyword?
+## 6) What is mean by new Keyword?
+
+
+
 
 ## 1) What is Block Scope ?
 Whenever we declare any variable with let and const it can access to that scope only not another scope 
