@@ -8,7 +8,9 @@
 ## 5) What are forms in HTML?
 ## 6) What are event listeners in HTML?
 ## 7) what is onload event?
-
+## 8) What is scroll event?
+## 9) How do you use Geo Location API?
+## 10) How do you know if a user is offline or not? What API does the browser provide for that?
 
 
 ## 1) How do you add CSS to an HTML webpage?
@@ -218,3 +220,112 @@ Here's an example of using the onload event on an image element:
 In this example, when the image with the source "example.jpg" finishes loading, the imageLoaded() function is executed, logging the message "Image loaded!" to the browser's console. You can replace the function with any desired actions to be performed once the image is loaded.
 
 The onload event is a valuable tool for synchronizing JavaScript code with the loading process of web pages and elements, allowing you to control the timing and behavior of your scripts based on the completion of the loading process.
+
+
+## 8) What is scroll event?
+
+The scroll event is an event that is triggered when the user scrolls the content of a web page, typically by scrolling the mouse wheel, using touch gestures on a touchscreen device, or by using keyboard keys (e.g., arrow keys, Page Up/Down keys).
+
+The scroll event can be applied to the window object or specific HTML elements that have overflow content, such as <div> elements with a fixed height and scrolling enabled through CSS. When the user scrolls the page or the element, the scroll event is fired, and any associated JavaScript code or functions can be executed in response.
+
+The scroll event is useful for various scenarios where you want to add interactivity or trigger certain actions based on the scrolling behavior. Some common use cases of the scroll event include:
+
+1-> Implementing scrolling effects: You can use the scroll event to create visually appealing scrolling effects, such as parallax scrolling, fixed navigation bars that appear or disappear based on scrolling direction, lazy loading of content as the user scrolls, or animating elements as they come into view.
+
+2-> Tracking user engagement: By listening to the scroll event, you can track how far a user has scrolled on a page. This information can be useful for analytics purposes, measuring user engagement, or triggering specific events or content based on the user's scroll position.
+
+3-> Infinite scrolling: With the scroll event, you can implement infinite scrolling, where new content is loaded dynamically as the user scrolls to the bottom of a page or an element. This technique is commonly used in social media feeds, news articles, or any scenario where you want to provide a seamless scrolling experience with continuous content loading.
+
+Here's an example of using the scroll event to track the scroll position of the window:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      height: 2000px; /* Creating a tall page to enable scrolling */
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      console.log('Scroll position:', scrollPosition);
+      // Perform additional actions based on the scroll position
+    });
+  </script>
+</head>
+<body>
+  <!-- Content -->
+</body>
+</html>
+
+In this example, as the user scrolls the page, the scroll event listener is triggered, and the scroll position is logged to the browser's console. You can replace the console.log statement with any desired actions or functions to be executed based on the scroll position.
+
+The scroll event provides a way to create interactive and responsive web pages that respond to user scrolling behavior. By leveraging this event, you can add various scroll-related functionalities and enhance the overall user experience of your web application.
+
+
+## 9) How do you use Geo Location API?
+
+To use the Geolocation API in JavaScript, you can follow these steps:
+
+1-> Check browser support: Before using the Geolocation API, it's important to check if the user's browser supports it. You can do this by verifying the presence of the navigator.geolocation object.
+
+2-> Request user permission: Geolocation API requires user permission to access their location information. To prompt the user for permission, you can call the navigator.geolocation.getCurrentPosition() method. This method takes two callback functions as arguments: one for success and one for failure.
+
+javascript
+Copy code
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+
+The success callback function is executed if the user grants permission and the location is successfully obtained. It receives a Position object as a parameter, containing the latitude, longitude, and other location information.
+
+The error callback function is executed if the user denies permission or if there is an error in retrieving the location. It receives a PositionError object as a parameter, which contains details about the error.
+
+3-> Process the location information: In the success callback function, you can process the location data received from the Position object. You can access the latitude and longitude using the coords.latitude and coords.longitude properties, respectively. Other properties available in the Position object include coords.accuracy (accuracy of the location data), coords.altitude (altitude if available), coords.speed (speed if available), and more.
+
+Here's an example of using the Geolocation API to retrieve and display the user's current latitude and longitude:
+
+
+function successCallback(position) {
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+  console.log('Latitude:', latitude);
+  console.log('Longitude:', longitude);
+}
+
+function errorCallback(error) {
+  console.log('Error code:', error.code);
+  console.log('Error message:', error.message);
+}
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+} else {
+  console.log('Geolocation is not supported by this browser.');
+}
+In this example, the latitude and longitude are logged to the browser's console. You can modify the code to use the location data in any desired way, such as displaying it on a map, fetching location-specific information, or performing any other functionality based on the user's location.
+
+It's important to note that obtaining the user's location information may take some time, and the accuracy of the data can vary depending on the device and environment. Additionally, some browsers require the user to access the site over HTTPS to enable geolocation functionality for security reasons.
+
+By utilizing the Geolocation API, you can create location-aware web applications that provide personalized and context-aware experiences for your users.
+
+
+## 10) How do you know if a user is offline or not? What API does the browser provide for that?
+
+To determine if a user is offline or online, you can use the navigator.onLine property provided by the browser's Navigator object. This property is part of the Network Information API and allows you to check the current online status of the user's device.
+
+The navigator.onLine property returns a boolean value:
+
+true indicates that the user's device is currently connected to the network and online.
+false indicates that the user's device is not connected to the network or is in offline mode.
+Here's an example of how you can use the navigator.onLine property:
+
+javascript
+Copy code
+
+if (navigator.onLine) {
+  console.log('User is online');
+} else {
+  console.log('User is offline');
+}
