@@ -51,3 +51,29 @@ Remember to specify the correct path in the href attribute to locate your CSS fi
 Using any of these methods, you can apply various CSS properties to style your HTML elements.
 
 
+## 2) What are the features of HTML5?
+
+HTML5 introduced several new features and enhancements over its predecessor, HTML4. Here are some of the key features of HTML5:
+
+1-> Semantic Elements: HTML5 introduced new semantic elements like <header>, <footer>, <nav>, <article>, <section>, etc. These elements provide a clearer structure to web documents and improve accessibility and search engine optimization.
+
+2-> Multimedia Support: HTML5 provides native support for multimedia elements without the need for third-party plugins. The <audio> and <video> elements allow embedding and controlling audio and video content directly within web pages.
+
+3-> Canvas: HTML5 introduced the <canvas> element, which provides a drawing surface on which you can use JavaScript to render graphics, animations, charts, and other visualizations dynamically.
+
+4-> Geolocation: HTML5 includes the Geolocation API, which enables web applications to retrieve the user's geographical location information (with the user's permission). This feature enables location-aware services and applications.
+
+5-> Offline Web Applications: HTML5 introduced the concept of offline web applications through the Application Cache API. This allows web pages to be cached locally and accessed offline, providing a better user experience in situations with limited or no internet connectivity.
+
+6-> Web Storage: HTML5 provides two mechanisms for client-side storage: localStorage and sessionStorage. These APIs allow web applications to store data locally on the user's device, providing a way to persist data beyond a single session or page reload.
+
+7-> Web Workers: HTML5 introduced Web Workers, which allow running scripts in the background without affecting the user interface responsiveness. Web Workers enable parallel processing and can handle complex tasks without blocking the main execution thread.
+
+8-> Form Enhancements: HTML5 introduced several new input types (e.g., date, email, number, range, search, etc.) and attributes to enhance form handling and validation. It also introduced the <datalist> element, which provides a list of predefined options for input fields.
+
+9-> Drag and Drop: HTML5 introduced native support for drag and drop interactions. Developers can use the Drag and Drop API to allow users to drag elements and drop them in specific locations or targets within the web page.
+
+10-> Improved Accessibility: HTML5 includes new features and attributes that improve accessibility, such as the <figure> and <figcaption> elements for providing captions and descriptions to multimedia content, the alt attribute for better image descriptions, and the aria-* attributes for defining roles and properties for accessibility purposes.
+
+These are just some of the prominent features introduced in HTML5. The specification also brought other improvements like enhanced CSS support, better error handling, new APIs, and more.
+
