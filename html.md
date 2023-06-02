@@ -77,3 +77,18 @@ HTML5 introduced several new features and enhancements over its predecessor, HTM
 
 These are just some of the prominent features introduced in HTML5. The specification also brought other improvements like enhanced CSS support, better error handling, new APIs, and more.
 
+## 3) What are the different types of storage in HTML5? 
+
+HTML5 provides several types of storage options for web applications. Here are the different types of storage available in HTML5:
+
+1-> Local Storage: Local Storage, also known as Web Storage or DOM Storage, allows web applications to store data persistently on the user's device. It provides a simple key-value storage mechanism that can be accessed by JavaScript. The data stored in Local Storage remains available even after the user closes the browser or restarts the device. The data limit for Local Storage is typically around 5MB per domain.
+
+2-> Session Storage: Session Storage is similar to Local Storage, but the data stored in Session Storage is specific to a particular session or tab. Each tab or window within a browser has its own session storage, and the data is accessible only within that session. When the user closes the tab or window, the data stored in Session Storage is cleared. Session Storage is useful for maintaining session-specific data or temporary information.
+
+3-> IndexedDB: IndexedDB is a powerful client-side database provided by HTML5. It allows web applications to store and retrieve structured data using a JavaScript API. IndexedDB provides a more advanced and flexible storage mechanism compared to Local Storage or Session Storage. It supports indexes for efficient data retrieval, transactions for handling data updates, and complex queries. IndexedDB is suitable for applications that require more robust data storage capabilities.
+
+4-> Web SQL Database: Web SQL Database is a deprecated storage mechanism that provides a SQL database interface within the web browser. It allows web applications to store and retrieve data using SQL queries. Although it is no longer being actively developed, some browsers still support Web SQL Database.
+
+5-> Cookies: Cookies are a traditional form of storage in web development. They are small text files stored on the user's device by the web browser. Cookies can be used to store small amounts of data that are sent back to the server with each request. They have limitations on data size (usually up to 4KB) and are primarily used for maintaining user sessions, remembering user preferences, and tracking user activities.
+
+It's important to note that each type of storage has its own characteristics, limitations, and suitable use cases. Developers can choose the appropriate storage option based on the specific requirements of their web application.
