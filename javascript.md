@@ -6,6 +6,7 @@
 ## 4) What is Lexical Scope ?
 ## 5) What is mean by This Keyword?
 ## 6) What is mean by new Keyword?
+## 7) What is Difference bw Call apply and bind?
 
 
 
@@ -104,3 +105,51 @@ function Person(name, age) {
 var john = new Person("John", 25);
 console.log(john.name); // Output: John
 console.log(john.age); // Output: 25
+
+
+## 7) What is Difference bw Call apply and bind?
+
+call, apply, and bind are methods in JavaScript that allow you to control the execution context (the value of this) of a function. While they serve a similar purpose, there are some differences between them.
+
+1-> call: The call method is used to invoke a function immediately. It allows you to pass arguments to the function individually. The first argument is the value that will be used as this inside the function, and the subsequent arguments are the function arguments.
+
+2-> apply: The apply method is similar to call, but it accepts arguments as an array or an array-like object. The first argument is still the value of this, and the second argument is an array (or array-like object) containing the function arguments.
+
+3-> bind: The bind method creates a new function with a fixed value for this. It does not invoke the function immediately but returns a new function that you can invoke later. bind also allows you to pre-fill some or all of the arguments of the original function.
+
+
+Example
+
+function Person(name,age){
+    this.name = name
+    this.age = age
+}
+
+// Using Call Method
+function PersonCall(name,age,grade){
+    Person.call(this,name,age)
+    this.grade = grade
+}
+let callMethod = new PersonCall("Bruce Wayne",48,"A Class")
+console.log(callMethod) 
+
+
+// Using Apply Method
+function PersonApply(name,age,rollNo){
+    Person.apply(this,[name,age])
+    this.rollNo = rollNo
+}
+
+let applyMethod = new PersonApply("Sarim",20,"33")
+console.log(applyMethod)
+
+// Using Bind Method
+
+function PersonBind(name,age,classs){
+    let result = Person.bind(this,name,age)
+    result()
+    this.classs = classs
+}
+
+let bindMethod = new PersonBind("Sarim",20,"12th")
+console.log(bindMethod)
