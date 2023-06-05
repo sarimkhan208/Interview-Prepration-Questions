@@ -7,6 +7,7 @@
 ## 5) What is mean by This Keyword?
 ## 6) What is mean by new Keyword?
 ## 7) What is Difference bw Call apply and bind?
+## 8) What are closures?
 
 
 
@@ -153,3 +154,20 @@ function PersonBind(name,age,classs){
 
 let bindMethod = new PersonBind("Sarim",20,"12th")
 console.log(bindMethod)
+
+## 8) What are closures?
+A closure is a function that retains access to variables from its containing scope even after the outer function has finished executing. It "closes over" these variables, allowing the function to access and manipulate them. Closures are powerful for creating functions with persistent state and private data, and they are commonly used in scenarios involving encapsulation and asynchronous programming.
+
+function outerFunction() {
+  var outerVariable = 'Hello';
+
+  function innerFunction() {
+    var innerVariable = ' world!';
+    console.log(outerVariable + innerVariable);
+  }
+
+  return innerFunction;
+}
+
+var closure = outerFunction();
+closure(); // Output: Hello world!
