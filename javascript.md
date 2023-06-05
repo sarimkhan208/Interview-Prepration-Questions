@@ -8,6 +8,7 @@
 ## 6) What is mean by new Keyword?
 ## 7) What is Difference bw Call apply and bind?
 ## 8) What are closures?
+## 9) Difference bw var,let and const?
 
 
 
@@ -171,3 +172,19 @@ function outerFunction() {
 
 var closure = outerFunction();
 closure(); // Output: Hello world!
+
+## 9) Difference bw var,let and const?
+var ->  * origin ES2015
+        * var has functional or Global scope
+        * var has hoisted at the top of execution and initialised as undefined
+        * redecleration are allow
+
+Let ->  * origin ES2016
+        * let has block scope
+        * let has hoisted at the top of execution and left as uninitialised
+        * redecleration are allow
+
+const-> * origin ES2016
+        * const has block scope
+        * const has hoisted at the top of execution and left as uninitialised
+        * redecleration are not allow
