@@ -2,6 +2,7 @@
 
 ## 1) What are CSS selectors?
 ## 2) What are CSS variables?
+## 3) What is Box Model?
 
 
 ## 1) What are CSS selectors?
@@ -46,3 +47,37 @@ Copy code
 h1 {
   color: var(--primary-color);
 }
+
+## 3) What is Box Model?
+
+The box model is a fundamental concept in CSS (Cascading Style Sheets) that describes how elements in a web page are rendered and how their dimensions and spacing are calculated.
+
+According to the box model, every element in HTML is represented as a rectangular box. This box is composed of four main components:
+
+1-> Content: It represents the actual content of the element, such as text, images, or other HTML elements. The content area is defined by the width and height properties.
+
+2-> Padding: It is a transparent area surrounding the content and provides space between the content and the border. The padding area is controlled by the padding property and can be set independently for each side (top, right, bottom, left).
+
+3-> Border: It is a line that surrounds the padding and content area. The border can have a specified width, style, and color, which are defined by the border property.
+
+4-> Margin: It is a transparent area surrounding the padding, border, and content. The margin creates space between the element and adjacent elements or the containing element. The margin area is controlled by the margin property and can also be set independently for each side (top, right, bottom, left).
+
+
++-----------------------------------------------------------+
+|                           Margin                          |
+|                                                           |
+|           +-----------------------------------+           |
+|           |              Border               |           |
+|           |                                   |           |
+|           |         +-----------------+       |           |
+|           |         |     Padding     |       |           |
+|           |         |                 |       |           |
+|           |         |                 |       |           |
+|           |         +-----------------+       |           |
+|           |         |    Content      |       |           |
+|           |                                   |           |
+|           +-----------------------------------+           |
+|                                                           |
+|                           Margin                          |
+|                                                           |
++-----------------------------------------------------------+
