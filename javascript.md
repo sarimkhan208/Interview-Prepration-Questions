@@ -9,6 +9,7 @@
 ## 7) What is Difference bw Call apply and bind?
 ## 8) What are closures?
 ## 9) Difference bw var,let and const?
+## 10) What is Hoisting?
 
 
 
@@ -188,3 +189,18 @@ const-> * origin ES2016
         * const has block scope
         * const has hoisted at the top of execution and left as uninitialised
         * redecleration are not allow
+
+
+## 10) What is Hoisting?
+
+Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase before the code is executed. This means that regardless of where variables and functions are declared in the code, they are conceptually moved to the top of their respective scope.
+
+Hoisting applies to variable declarations made using the var keyword and function declarations. It does not apply to variables declared with let or const or to function expressions (anonymous functions assigned to variables).
+
+Variable hoisting:
+When a variable is declared with var, the declaration is hoisted to the top of its scope. However, the assignment or initialization of the variable remains in the same place. This means that variables declared with var are accessible throughout their entire scope, even before the point where they are actually declared, but their values will be undefined until the assignment statement is encountered.
+
+
+console.log(x); // Output: undefined
+var x = 10;
+console.log(x); // Output: 10
